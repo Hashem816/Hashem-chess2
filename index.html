@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>لعبة الشطرنج - موقع هاشم</title>
+  <!-- ربط ملف CSS الخارجي -->
+  <link rel="stylesheet" href="style.css">
+  <!-- ربط ملف JavaScript الخارجي مع defer لضمان تحميل الصفحة أولاً -->
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <!-- الهيدر: يحتوي على عنوان الموقع وقائمة تنقل متقدمة -->
+  <header>
+    <div class="header-container">
+      <h1>لعبة الشطرنج - موقع هاشم</h1>
+      <nav>
+        <ul>
+          <li><a href="#game">اللعبة</a></li>
+          <li><a href="#rules">قواعد اللعبة</a></li>
+          <li><a href="#statistics">إحصائيات</a></li>
+          <li><a href="#settings">الإعدادات</a></li>
+          <li><a href="#about">عن الموقع</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- المحتوى الرئيسي: مقسم إلى أقسام مختلفة -->
+  <main>
+    <!-- قسم عرض لوحة الشطرنج -->
+    <section id="game" class="content-section">
+      <header>
+        <h2>لوحة الشطرنج</h2>
+        <p>حاول تحريك القطع وفقاً للقواعد المعروضة. ستتفاعل القطع معاً كما في الشطرنج الحقيقي.</p>
+      </header>
+      <!-- حاوية لوحة الشطرنج التي سيتم إنشاؤها ديناميكياً بواسطة JavaScript -->
+      <div id="chessboard" class="chessboard" data-board="initial">
+        <!-- سيتم إنشاء الخانات والقطع بواسطة السكربت -->
+      </div>
+    </section>
+
+    <!-- قسم قواعد اللعبة -->
+    <section id="rules" class="content-section">
+      <header>
+        <h2>قواعد اللعبة</h2>
+      </header>
+      <article class="rules-article">
+        <h3>الحركات الأساسية</h3>
+        <p>
+          تتبع القطع الحركات القياسية للشطرنج مع إضافة بعض اللمسات الخاصة لضمان تجربة لعب مميزة. 
+          سيتم شرح كل حركة بالتفصيل عند التفاعل معها.
+        </p>
+      </article>
+      <article class="rules-article">
+        <h3>كش مات والتبييت</h3>
+        <p>
+          تحتوي اللعبة على قواعد متقدمة مثل التبييت، كش مات، وتعويضات إضافية لضمان تحدي مستمر.
+        </p>
+      </article>
+    </section>
+
+    <!-- قسم الإحصائيات: لمتابعة أداء اللاعب وتاريخ المباريات -->
+    <section id="statistics" class="content-section">
+      <header>
+        <h2>الإحصائيات</h2>
+      </header>
+      <aside class="stats-panel">
+        <p>عدد المباريات: <span id="match-count">0</span></p>
+        <p>أعلى النقاط: <span id="high-score">0</span></p>
+        <p>نسبة الفوز: <span id="win-rate">0%</span></p>
+      </aside>
+    </section>
+
+    <!-- قسم الإعدادات: لتخصيص تجربة اللعب -->
+    <section id="settings" class="content-section">
+      <header>
+        <h2>إعدادات اللعبة</h2>
+      </header>
+      <form id="game-settings" action="#" method="post">
+        <fieldset>
+          <legend>خيارات العرض</legend>
+          <label for="board-theme">سمة اللوحة:</label>
+          <select id="board-theme" name="board-theme">
+            <option value="classic">كلاسيكي</option>
+            <option value="modern">حديث</option>
+            <option value="dark">داكن</option>
+          </select>
+        </fieldset>
+        <fieldset>
+          <legend>خيارات اللعب</legend>
+          <label for="move-sound">تشغيل صوت الحركة:</label>
+          <input type="checkbox" id="move-sound" name="move-sound" checked>
+        </fieldset>
+        <button type="submit">حفظ الإعدادات</button>
+      </form>
+    </section>
+
+    <!-- قسم "عن الموقع": معلومات إضافية عن المشروع والمطور -->
+    <section id="about" class="content-section">
+      <header>
+        <h2>عن الموقع</h2>
+      </header>
+      <article>
+        <p>
+          هذا الموقع هو تجربة مميزة في لعبة الشطرنج، حيث تم برمجته باستخدام HTML, CSS, وJavaScript فقط. 
+          الهدف هو تقديم تجربة لعب احترافية مع قواعد معقدة وحركات متقنة لجميع القطع.
+        </p>
+        <p>
+          من تطوير: <strong>هاشم</strong> - معتمد على أحدث التقنيات لتوفير تجربة سلسة وذكية.
+        </p>
+      </article>
+    </section>
+  </main>
+
+  <!-- الفوتر: معلومات النسخة وحقوق الملكية -->
+  <footer>
+    <div class="footer-container">
+      <p>© 2025 لعبة الشطرنج - من تصميم وبرمجة هاشم</p>
+      <nav class="footer-nav">
+        <ul>
+          <li><a href="#about">عن الموقع</a></li>
+          <li><a href="#contact">تواصل معنا</a></li>
+          <li><a href="#privacy">سياسة الخصوصية</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
